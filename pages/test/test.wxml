@@ -1,0 +1,16 @@
+<!--pages/test/test.wxml-->
+<view id="tapTest" data-hi="WeChat" bindtap="tapName"> Click me! </view>
+
+<template name="item">
+  <text>{{text}}</text>
+</template>
+<template is="item" data="{{text: '4'}}"/>
+
+
+<wxs module="m1">
+var msg = "1";
+var m = '1';
+module.exports.m = msg === m;
+</wxs>
+
+<view> {{m1.m}} </view>
